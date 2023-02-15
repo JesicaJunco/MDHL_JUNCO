@@ -9,23 +9,24 @@ body{
 }
 header{
     width: 85vw;
-    height: 25vh;
-    margin: 25px 10%;
+    height: 35vh;
+    margin: 35px 10%;
     background-image: url(../img/design1_image1.jpg);
     background-size: cover;
     background-position: 0 40%;
-    padding: .5rem;   
+    padding: 0.5rem;   
 }
 header h1{
    position: absolute;
-   top: 0vh;
+   padding-top: 0.5rem;
+   top: -1.5vh;
    left: 20.5vh;
-   text-align: left;
+   text-align: center;
    font-family: sans-serif;
 }
-section nav{
+nav{
     position: absolute;
-    top: 0.5%; left: 64%;
+    top: 0.5%; left: 58%;
     text-align: right;   
 }
 nav a{
@@ -34,8 +35,6 @@ nav a{
     font-weight: bold;
     color: white;
     background-color: blue;
-    width: 8rem;
-    height: 2.5rem;
     padding: 0.5rem;
     text-align: center;
     text-decoration:none;
@@ -49,26 +48,53 @@ a:hover{
     color: black;
     background-color: rgb(172, 212, 245);
 }
-section .active{
+.active{
 background-color: rgb(31, 172, 31);
 }
-h2{
-    position: absolute;
+.h2{
+    
     top: 35%; left: 40%;
     text-align: center;
     border: 2px solid black;
-    margin: -20px 10% 50px 10%;
+    margin: -20px 5% 50px 10%;
     font-size: 3vh;
 }
-.descripcion{  
-    display: flex; 
-    }
-.descripcion h3{
-    font-family:sans-serif;
+p{
+    text-align: center;
+}
+section>div{
+    padding: 0.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    text-align:justify;
+    gap: .5rem;
+}
+#listas>div{
+    list-style-position:inside;
+}
+dt, h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform:uppercase;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+ol, li{
+    padding-bottom: 0.5rem;
+}
+dd{
+    line-height: 1.5rem;
+    text-indent: 1.5rem; 
+}
+ul{
+    text-indent: 2.5rem;
+    list-style-type: circle;
 }
 .img-logo{
-    height: 200px;
-    margin: 10px; 
+    width: 10vw;
+    align-items: center;
+    
 }
 .img-hockey{
     height: 200px;
@@ -87,6 +113,35 @@ div p{
     font-family: sans-serif;
     font-weight: bold;
 }
-p{
-    text-align: center;
+section #tablas{
+    list-style-position:inside;
+}
+caption{
+    text-align: left;
+    padding: .3rem;
+}
+.linea{
+    text-decoration: underline;
+}
+tbody tr:nth-child(even){
+    background-color: #faf3ea;
+}
+
+tbody tr:nth-child(odd), thead tr, tfoot tr{
+    background-color: #e8dff7;
+}
+table{
+    table-layout: auto;
+    border-collapse: separate;
+}
+.contact{
+    display: flex;
+    font-family:'Lucida Sans';
+}
+
+div p.phone,div p.email{
+    width: 70%;
+}
+footer>p{
+    font-family:'Times New Roman', Times, serif;
 }
