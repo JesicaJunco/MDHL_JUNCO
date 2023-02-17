@@ -2,26 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: antiquewhite;
 }
 body{
-    width: 100vw;
-    height: 100vh;
+    font-family: sans-serif;
+    background-color: transparent;
+    background-size: 20px 20px;
+    background-position: 0 0 10px 10px;
 }
-header{
-    width: 85vw;
-    height: 35vh;
-    margin: 35px 10%;
+header {
+    height: 25vh;
+    margin: 55px 5% 0 5%;
     background-image: url(../img/design1_image1.jpg);
     background-size: cover;
     background-position: 0 40%;
-    padding: 0.5rem;   
+    min-height: 40vh;
+    padding: .5rem;
+    border-radius: 15px 15px 0 0;
+}
+header img {
+    width: 10%;
+    display: block;
+    position: absolute;
+    top: 32vh;
+    right: 5vw;
+    background-color: transparent;
 }
 header h1{
    position: absolute;
    padding-top: 0.5rem;
-   top: -1.5vh;
-   left: 20.5vh;
+   top: -0.5rem;
+   left: 14vh;
    text-align: center;
+   font-size: 3rem;
    font-family: sans-serif;
 }
 nav{
@@ -46,31 +59,57 @@ nav a{
 }
 a:hover{
     color: black;
-    background-color: rgb(172, 212, 245);
+    background-color: antiquewhite;
 }
 .active{
 background-color: rgb(31, 172, 31);
 }
 .h2{
-    
+    background-color: black;
+    color: bisque;
     top: 35%; left: 40%;
     text-align: center;
     border: 2px solid black;
-    margin: -20px 5% 50px 10%;
+    margin: -20px 5% 50px 5%;
     font-size: 3vh;
 }
-p{
+
+legend{
+    font-weight: bold;
+}
+p, h3{
     text-align: center;
+}
+.email >p{
+    width: 100%;
+    padding: 1rem;
+    font-size: larger;
+    font-weight: lighter;
 }
 section>div{
     padding: 0.5rem 3rem;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items:start;
     text-align:justify;
     gap: .5rem;
+} 
+
+.contact >div{
+    margin: 2rem;
+    padding: 0.5rem;
+    width: 60%;
 }
-#listas>div{
+.contact img, #tablas>img{
+    border-radius: 10px;
+    box-shadow: 8px 5px 5px black;
+    width: 25%;
+    margin-left: 5rem;
+}
+.listas>div{
+    font-size: larger;
+    font-weight: lighter;
+    margin: 2rem; 
     list-style-position:inside;
 }
 dt, h4{
@@ -91,8 +130,16 @@ ul{
     text-indent: 2.5rem;
     list-style-type: circle;
 }
+.logo{
+    border: 1px solid lawngreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 90%;
+}
 .img-logo{
-    width: 10vw;
+    border: 1px solid darkred;
+    width: 8vw;
     align-items: center;
     
 }
@@ -100,7 +147,15 @@ ul{
     height: 200px;
     margin: 50px;
 }
-
+.descripcion >p{
+    font-size: larger;
+    font-weight: lighter;
+}
+.descripcion >h3{
+    font-weight: bold;
+    line-height: 2;
+    font-size: x-large;
+}
 h3{
     line-height: 2;
     padding-left: 25px;
@@ -116,25 +171,50 @@ div p{
 section #tablas{
     list-style-position:inside;
 }
-caption{
-    text-align: left;
-    padding: .3rem;
-}
+
 .linea{
     text-decoration: underline;
 }
-tbody tr:nth-child(even){
-    background-color: #faf3ea;
+
+th{
+    background-color: #BBB2B0;
+}
+#tablas> table{
+    border: 1px solid rgb(21, 19, 19);
+    margin: 2rem;
+    width: 60%;
+    table-layout: auto;
+    border-collapse: collapse;
+    box-shadow: 10px 10px #BBB2B0; 
 }
 
-tbody tr:nth-child(odd), thead tr, tfoot tr{
-    background-color: #e8dff7;
+td{
+border: 1px solid rgb(19, 19, 19);
 }
-table{
-    table-layout: auto;
-    border-collapse: separate;
+th, td{
+    padding: 0.5rem;
+}
+#tablas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 2rem;
+}
+.parrafo_tabla{
+    margin-left: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.parrafo_tabla p{
+    font-size: larger;
+    font-weight: lighter;
+    text-indent: 0;
 }
 .contact{
+    width: 100%;
     display: flex;
     font-family:'Lucida Sans';
 }
@@ -142,6 +222,94 @@ table{
 div p.phone,div p.email{
     width: 70%;
 }
+.form-section{
+    
+    margin: 35px 10%;
+}
+fieldset{
+    border: 2px solid orange;
+    border-radius: 10px;
+    box-shadow: 8px 5px 5px black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+fieldset>label{
+  
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.lbl{
+    width: 25rem;
+}
+.lbl_dir{
+    width: 30rem;
+}
+.lbl_dir>input{
+    width: 300px;
+}
+.lbl_code{
+    width: 13rem;
+
+}
+.lbl_code>input{
+    width: 100px;
+}
+.lbl_date{
+    display: flex;
+    flex-direction: column;
+}
+.f_child{
+    display: flex;
+    padding-left: 0.5rem;
+    margin-left: 2rem;
+    box-shadow: none;
+}
+.parrafo{
+    border: 2px solid orange;
+    border-radius: 10px;
+    box-shadow: 8px 5px 5px black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.parrafo>p{
+    text-align: justify;
+}
+.lbl_submit input{
+    margin: 0;
+    padding: 0;
+    width: 10rem;
+    height: 2rem;
+    background-color: rgb(20, 186, 69);
+    color: black;
+    font-weight: bolder;
+}
+.maps{
+    border-top: 3px dotted rgb(6, 6, 6);
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.maps h3{
+    width: 100%;
+}
+iframe{
+    width: 400px;
+    height: 300px;
+    margin: 1rem;
+    box-shadow: 10px 10px #BBB2B0;
+}
 footer>p{
+    margin-top: 3rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color:rgb(243, 216, 178);
+    font-size: larger;
     font-family:'Times New Roman', Times, serif;
 }
